@@ -13,14 +13,13 @@ body {
 .calc-grid {
   display: grid;
   justify-content: center;
-  align-items: center;
+  align-content: center;
   min-height: 100vh;
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
 
-.calc-grid,
-button {
+.calc-grid > button {
   cursor: pointer;
   font-size: 2rem;
   border: 1px solid #000;
@@ -28,7 +27,32 @@ button {
   background-color: #ffffff80;
 }
 
-.calc-grid,
-button:hover {
-  background-color: #d0f4de90;
+.calc-grid > button:hover {
+  background-color: #00000005;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  grid-column: 1 / -1;
+  background-color: #00000075;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-operand {
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+.output .current-operand {
+  color: #ffffff;
+  font-size: 2rem;
 }
