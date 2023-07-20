@@ -19,6 +19,19 @@ body {
   grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
 
+.calc-grid :first-child {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.calc-grid :nth-child(17) {
+  border-bottom-left-radius: 12px;
+}
+
+.calc-grid :nth-child(19) {
+  border-bottom-right-radius: 12px;
+}
+
 .calc-grid > button {
   cursor: pointer;
   font-size: 2rem;
