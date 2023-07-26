@@ -10,7 +10,7 @@ body {
   background: linear-gradient(to left, #d0f4de, #e4c1f9);
 }
 
-.calc-grid {
+.calc {
   display: grid;
   justify-content: center;
   align-content: center;
@@ -19,20 +19,20 @@ body {
   grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
 
-.calc-grid :first-child {
+.calc :first-child {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
 
-.calc-grid :nth-child(17) {
+.calc :nth-child(17) {
   border-bottom-left-radius: 12px;
 }
 
-.calc-grid :nth-child(19) {
+.calc :nth-child(19) {
   border-bottom-right-radius: 12px;
 }
 
-.calc-grid > button {
+.calc > button {
   cursor: pointer;
   font-size: 2rem;
   border: 1px solid #000;
@@ -40,7 +40,7 @@ body {
   background-color: #ffffff80;
 }
 
-.calc-grid > button:hover {
+.calc > button:hover {
   background-color: #00000005;
 }
 
@@ -48,24 +48,20 @@ body {
   grid-column: span 2;
 }
 
-.output {
+.screen {
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
   flex-direction: column;
   grid-column: 1 / -1;
   background-color: #00000075;
+  color: #ffffff;
   padding: 10px;
   word-wrap: break-word;
   word-break: break-all;
 }
 
-.output .previous-operand {
-  color: #ffffff;
-  font-size: 2rem;
-}
-
-.output .current-operand {
+.screen #display {
   color: #ffffff;
   font-size: 2rem;
 }
