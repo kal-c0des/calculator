@@ -57,6 +57,7 @@ function calculate() {
 
 function handleNumber(number) {
   if (operator === null) {
+    handleClear();
     firstArg += number;
     displayNum.innerText = firstArg;
   } else {
