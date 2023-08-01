@@ -11,6 +11,7 @@ let operator = null;
 let secondArg = "";
 let operatorClicked = false;
 let deleteClicked = false;
+let equalsClicked = false;
 
 function add(num1, num2) {
   return +num1 + +num2;
@@ -55,16 +56,20 @@ function calculate() {
   }
 }
 
-function handleNumber(number) {
+const handleNumber = (number) => {
   if (operator === null) {
-    handleClear();
-    firstArg += number;
+    if (equalsClicked) {
+      firstArg = number;
+      equalsClicked = false;
+    } else {
+      firstArg += number;
+    }
     displayNum.innerText = firstArg;
   } else {
     secondArg += number;
     displayNum.innerText = secondArg;
   }
-}
+};
 
 function handleOperator(op) {
   if (operator !== null) {
@@ -77,6 +82,7 @@ function handleOperator(op) {
 
 function handleEquals() {
   calculate();
+  equalsClicked = true;
 }
 
 function handleClear() {
