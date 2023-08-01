@@ -61,7 +61,7 @@ body {
   word-break: break-all;
 }
 
-.screen #display {
+.screen #display-upper {
   color: #ffffff;
   font-size: 2rem;
 }
